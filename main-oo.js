@@ -12,13 +12,12 @@ class DomNodeFactory {
     // dans une classe, on évite d'utiliser la syntaxe arrow function pour définir les méthodes
     // car les fonctions définies avec les arrow functions ne pourront pas être redéfinies
     // dans les classes enfants
-    createNodeElement(type, classes, text = '') {
+    createNodeElement(type, cssClasses, text = '') {
         const element = document.createElement(type);
-
 
         // le destructuring permet de décomposer un objet ou un tableau
         // en plusieurs variables
-        element.classList.add(...classes);
+        element.classList.add(...cssClasses);
 
         if (text !== '') { 
             element.textContent = text;
